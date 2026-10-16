@@ -160,3 +160,51 @@
 .hero-inner{position:relative;z-index:1}
 .hero h1{max-width:1050px;text-shadow:0 2px 20px rgba(255,255,255,.55)}
 @media(max-width:640px){.hero:before{width:320px;height:320px;right:-185px;top:-130px}.doctor-photo{height:330px!important}}
+
+
+/* v11: mobile-first content extensions */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+img{max-width:100%}
+.doctor-photo{background:#fff!important}
+.doctor-photo img{background:#fff!important;object-fit:contain!important}
+.section-head h2,.hero h1{overflow-wrap:keep-all;word-break:keep-all}
+.service-visual{height:190px;background:#f4f8fe;overflow:hidden}
+.service-visual img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
+.detail-grid,.program-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.detail-card,.program-grid article{border:1px solid #e0e9f5;border-radius:20px;overflow:hidden;background:white;box-shadow:0 8px 30px rgba(20,67,125,.04)}
+.detail-card img{width:100%;height:260px;object-fit:contain;background:#f5f8ff;display:block}
+.program-grid img{width:100%;height:300px;object-fit:contain;background:#f5f8ff;display:block}
+.detail-card>div,.program-grid article>div{padding:23px 25px 28px}
+.detail-card h3,.program-grid h3{font-size:23px;line-height:1.3;color:#154b9b;margin:0 0 10px;word-break:keep-all}
+.detail-card p,.program-grid p{font-size:16px;line-height:1.8;color:#52657e;margin:0;word-break:keep-all}
+.schedule-section{background:#f5f9ff;border-radius:22px}
+.schedule-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.schedule-table{width:100%;min-width:620px;border-collapse:separate;border-spacing:0;background:white;border:1px solid #dbe7f6;border-radius:14px;overflow:hidden;text-align:center}
+.schedule-table th,.schedule-table td{padding:17px 12px;border-bottom:1px solid #e4edf7;font-size:17px}
+.schedule-table thead th{background:#1455ad;color:white;font-weight:700}
+.schedule-table tbody th{text-align:left;color:#163d7d;white-space:nowrap}
+.schedule-table small{display:block;font-size:12px;font-weight:400;color:#71839a;margin-top:3px}
+.schedule-table .on{color:#1761c4;font-size:19px;font-weight:900}
+.schedule-table tr:last-child td,.schedule-table tr:last-child th{border-bottom:0}
+.schedule-foot{font-size:14px;color:#60738e;margin-top:15px}
+@media(max-width:800px){.detail-grid,.program-grid{grid-template-columns:1fr}.service-visual{height:220px}}
+@media(max-width:640px){
+ .hero h1{font-size:clamp(33px,8.4vw,45px)!important;line-height:1.33!important;letter-spacing:-.065em!important}
+ .hero-inner{padding:72px 22px 80px!important}
+ .section-head h2{font-size:clamp(30px,8vw,42px)!important;line-height:1.3!important}
+ .section-head p,.care-body p{font-size:16px!important;line-height:1.75!important}
+ .care-body h3{font-size:23px!important}
+ .care-body a{font-size:15px!important}
+ .detail-card img,.program-grid img{height:auto;max-height:350px;object-fit:contain}
+ .detail-card>div,.program-grid article>div{padding:22px}
+ .detail-card h3,.program-grid h3{font-size:22px}
+ .detail-card p,.program-grid p{font-size:16px}
+ .schedule-section{border-radius:14px}
+ .schedule-table th,.schedule-table td{padding:14px 10px;font-size:16px}
+ .doctor-photo{background:#fff!important}
+ .doctor-bio{font-size:16px!important;line-height:1.8!important}
+ .quick-text strong{font-size:16px!important;word-break:keep-all}
+ .quick-text small{font-size:13px!important}
+}
