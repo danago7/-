@@ -3,3 +3,41 @@
 @media(max-width:980px){.nav{gap:12px;font-size:11px}.brand img{width:170px}.quick-links{grid-template-columns:repeat(3,1fr)}.process-grid,.diagnostics-grid{grid-template-columns:repeat(2,1fr)}.programs-grid{grid-template-columns:repeat(2,1fr)}.doctors-grid{grid-template-columns:repeat(2,1fr)}.hero-inner{min-height:360px}.hero-team img{height:280px}}
 @media(max-width:650px){.header{height:65px;padding:0 18px}.brand img{width:175px}.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:6px;background:transparent;border:0;width:40px;height:40px}.menu-toggle span{width:25px;height:2px;background:var(--navy)}.nav{display:none;position:absolute;left:0;right:0;top:65px;background:white;flex-direction:column;align-items:stretch;gap:0;padding:10px 22px 22px;box-shadow:0 16px 30px #153c6818}.nav.open{display:flex}.nav a{padding:12px 0;font-size:15px}.nav .nav-cta{text-align:center;padding:12px}.hero-inner{padding:42px 20px 0;grid-template-columns:1fr;gap:25px}.hero h1{font-size:clamp(30px,8vw,42px)}.hero-team img{height:245px;object-position:center 55%}.quick-links{grid-template-columns:repeat(3,1fr);gap:6px;padding:0 12px;margin-top:12px}.quick-links a{min-height:76px;padding:9px}.quick-text strong{font-size:12px}.section{padding:70px 18px}.section-head{display:block;margin-bottom:24px}.section-head h2{font-size:28px}.section-head>p{margin-top:12px}.process-grid,.diagnostics-grid,.programs-grid{grid-template-columns:1fr 1fr;gap:9px}.process-card,.modern-card{padding:15px}.process-card h3,.modern-card h3{font-size:16px}.process-card p,.modern-card p{font-size:12px}.process-top,.modern-card-top{margin-bottom:17px}.program-card{min-height:300px}.program-card .modern-card-top{padding:10px;margin:-5px -5px 15px}.program-tags span{font-size:10px;padding:5px}.schedule-table th,.schedule-table td{padding:9px 3px;font-size:11px}.schedule-table tbody th{padding-left:6px;font-size:10px}.schedule-table small{font-size:8px}.doctors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.doctor-photo{height:215px}.doctor-info{padding:12px}.doctor-info h3{font-size:18px}.doctor-bio{font-size:10px;padding-left:14px}.parking-layout,.visit-grid{grid-template-columns:1fr}.parking-intro{padding:24px}.parking-intro h3{font-size:21px}.contact-band,.footer-top{flex-direction:column;align-items:stretch;gap:18px}.footer-inner{padding:50px 20px 100px}.footer-columns{grid-template-columns:1fr 1fr;gap:22px}.footer-bottom{flex-direction:column}.footer-cta{flex-wrap:wrap}.mobile-dock{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -6px 20px #132f5722}.mobile-dock a{background:var(--blue);color:#fff;padding:12px 6px;border-radius:8px;text-align:center;font-size:13px;font-weight:800}.mobile-dock a:last-child{background:var(--navy)}.doctors-page-intro{padding:40px 20px 0}.doctors-page-intro h1{font-size:28px}.doctors-contact{margin:0 18px 40px;flex-wrap:wrap}.hours-row{grid-template-columns:1fr 1fr}}
 @media(max-width:370px){.programs-grid{grid-template-columns:1fr}.doctor-photo{height:175px}.hero-team img{height:205px}}
+
+
+/* v27: hero, philosophy and mobile refinements */
+.hero-inner{grid-template-columns:minmax(0,1fr)!important;max-width:1180px;margin:auto;min-height:410px!important}
+.hero-copy{max-width:940px}
+.hero{background:radial-gradient(circle at 84% 15%,#d9e8ff 0,transparent 38%),linear-gradient(115deg,#f8fbff,#eaf3ff 65%,#f4f8ff)}
+.diagnostics-grid{align-items:stretch}
+.diag-card{height:100%;display:flex;flex-direction:column}
+.diag-card .modern-card-top{min-height:52px;margin-bottom:20px}
+.diag-card h3{margin-top:auto}
+.program-card{min-height:230px}
+.program-card p{margin-bottom:22px}
+.doctor-photo{height:290px;display:flex;justify-content:center;align-items:center;background:#fff}
+.doctor-photo img{object-fit:contain!important;object-position:center center!important}
+.philosophy-section{max-width:none;background:linear-gradient(180deg,#f4f8ff,#fff);padding-left:max(30px,calc((100vw - 1180px)/2));padding-right:max(30px,calc((100vw - 1180px)/2))}
+.philosophy-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.philosophy-card{background:white;border:1px solid #dbe5f4;border-radius:20px;padding:38px;box-shadow:0 12px 35px #0d31670a}
+.philosophy-label{color:#2a60b6;font-size:12px;font-weight:800;letter-spacing:.07em}
+.philosophy-card h3{font-size:clamp(23px,2.4vw,32px);line-height:1.4;letter-spacing:-.05em;margin:18px 0 24px}
+.philosophy-card>p{font-size:14px;color:#506783;line-height:1.95}
+.philosophy-goal{background:linear-gradient(140deg,#123b78,#0d3167);color:white}
+.philosophy-goal .philosophy-label{color:#bbd7ff}
+.goal-list{display:grid;gap:12px}
+.goal-list>div{border:1px solid #ffffff30;border-radius:12px;padding:15px 18px;background:#ffffff0c}
+.goal-list span{font-size:11px;color:#9cc7ff;margin-right:12px}
+.goal-list strong{font-size:15px}
+.goal-list p{font-size:12px;color:#d4e5ff;margin:8px 0 0 32px}
+@media(max-width:650px){
+.hero-inner{padding:55px 22px!important;min-height:340px!important}
+.hero h1{font-size:clamp(32px,8vw,45px);line-height:1.38}
+.philosophy-layout{grid-template-columns:1fr}
+.philosophy-card{padding:25px 22px}
+.diag-card .modern-card-top{min-height:48px}
+.diag-card{min-height:215px}
+.doctor-photo{height:230px}
+.program-card{min-height:230px}
+}
+@media(max-width:380px){.diagnostics-grid{grid-template-columns:1fr 1fr}.doctor-photo{height:175px}}
