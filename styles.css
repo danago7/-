@@ -139,3 +139,8 @@
 .doctor-photo{background:#fff!important;overflow:hidden}
 .doctor-info h3{overflow-wrap:keep-all}
 @media(max-width:640px){.doctor-card{display:block}.doctor-photo{height:300px;min-height:0}.doctor-info{padding:18px 20px 24px}.doctor-info h3{font-size:25px!important}.doctor-bio{font-size:16px!important;line-height:1.65}.quick-text strong{font-size:15px}.quick-text small{font-size:12px}.section-head p{font-size:15px}}
+
+/* 의료진 원본 인물 누끼 이미지 */
+.doctor-photo { background: transparent !important; }
+.doctor-photo img { background: transparent !important; object-fit: contain !important; }
+.doctor-role:empty, .section-kicker span:empty {display:none !important;}
