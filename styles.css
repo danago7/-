@@ -144,3 +144,7 @@
 .doctor-photo { background: transparent !important; }
 .doctor-photo img { background: transparent !important; object-fit: contain !important; }
 .doctor-role:empty, .section-kicker span:empty {display:none !important;}
+
+/* v9: consistent solid pastel blue background for original doctor portraits */
+.doctor-photo{background:#d2dff4!important}
+.doctor-photo img{background:#d2dff4;object-fit:cover}
