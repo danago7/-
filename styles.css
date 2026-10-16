@@ -93,3 +93,18 @@
 .full-btn{display:flex;width:100%;text-align:center}
 @media(max-width:760px){.statement{padding:70px 20px;min-height:340px}.statement h2{font-size:clamp(27px,6vw,37px)}.statement-desc{font-size:14px}.visit{padding:70px 20px}.visit-head{display:block}.visit-grid{grid-template-columns:1fr;gap:14px}.visit-details,.hours-card{padding:18px 20px}}
 @media(max-width:420px){.statement{padding:58px 18px}.statement h2{font-size:27px}.visit{padding:58px 16px}.visit-item h3{font-size:17px}.hours-row strong{font-size:16px}}
+
+/* v18: clean, typography-led approach section; no opaque logo bitmap */
+.statement{box-sizing:border-box;min-height:360px;padding:76px 24px 74px;gap:0;background:linear-gradient(125deg,#163e83,#2457a2);overflow:hidden}
+.statement::before{width:430px;height:430px;right:-190px;bottom:-310px;border:1px solid rgba(255,255,255,.11)}
+.statement::after{content:"";position:absolute;left:-170px;top:-300px;width:420px;height:420px;border:1px solid rgba(255,255,255,.10);border-radius:50%;pointer-events:none}
+.statement-accent{width:32px;height:3px;border-radius:8px;background:#b9d7ff;margin:0 auto 22px}
+.statement .section-kicker{display:block;margin:0 0 18px;color:#d5e7ff;letter-spacing:.19em;font-size:11px;line-height:1.4}
+.statement .section-kicker b{display:none}
+.statement h2{font-size:clamp(29px,3.25vw,43px);line-height:1.45;letter-spacing:-.045em;font-weight:850;max-width:760px;margin:0 auto 19px;color:#fff}
+.statement h2 em{color:#c7dfff}
+.statement-desc{font-size:clamp(13px,1.3vw,15px);line-height:1.85;max-width:680px;margin:0 auto;color:#e0eafa;word-break:keep-all}
+.statement-signature{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px auto 0;height:10px}
+.statement-signature span{width:28px;height:1px;background:#ffffff50}
+.statement-signature i{width:5px;height:5px;border-radius:50%;background:#c7dfff}
+@media(max-width:600px){.statement{min-height:0;padding:66px 22px 62px}.statement h2{font-size:clamp(26px,6.1vw,34px);line-height:1.46}.statement .section-kicker{font-size:10px}.statement-desc{font-size:13px}.statement-signature{margin-top:25px}}
