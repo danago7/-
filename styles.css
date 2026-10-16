@@ -161,3 +161,8 @@
  .doctors-contact{margin:0 16px 60px;flex-wrap:wrap}
 }
 @media(max-width:380px){.footer{padding-left:16px;padding-right:16px}.footer-cta{grid-template-columns:1fr}.footer-call{flex-direction:row;gap:6px}}
+
+/* v20: official brand logo, preserving the original vector-like contours */
+.footer-wordmark{display:inline-flex;align-items:center;line-height:1}
+.footer-logo-img{display:block;width:min(310px,75vw);height:auto;object-fit:contain}
+@media(max-width:600px){.footer-logo-img{width:min(270px,78vw)}}
