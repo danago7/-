@@ -39,3 +39,22 @@
 @media(max-width:1050px){.hero-inner{grid-template-columns:1fr}.hero-team{max-width:720px;width:100%;margin:auto}.hero-team-portraits img{height:190px}.programs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.hero-inner{gap:25px}.hero-team{border-radius:20px;padding:15px 5px 0}.hero-team-label{font-size:11px;margin-left:12px}.hero-team-portraits img{height:120px}.diag-section,.program-section{padding-top:58px;padding-bottom:58px}.diagnostics-grid,.programs-grid{grid-template-columns:1fr}.modern-card{padding:23px}.modern-card h3{font-size:23px}.modern-card p{font-size:16px}.modern-card-top svg{width:62px;height:62px}}
 @media(max-width:380px){.hero-team-portraits img{height:100px}.modern-card{padding:20px}}
+
+/* v15: restore the original v13 hero layout without portraits */
+.hero .hero-inner{display:flex;align-items:center;grid-template-columns:none;gap:0}
+.hero .hero-copy{width:100%}
+@media(max-width:1050px){.hero .hero-inner{display:flex}}
+
+/* v16: profile-card redesign using the exact supplied original team photograph */
+.doctors-section{background:linear-gradient(180deg,#f7faff 0%,#fff 55%)}
+.premium-doctors-grid{gap:16px;align-items:stretch}
+.premium-doctors-grid .doctor-card{border-radius:21px;border:1px solid #d9e6f7;box-shadow:0 12px 32px rgba(26,76,148,.045);background:#fff}
+.premium-doctors-grid .doctor-photo{height:260px;aspect-ratio:auto;background:#fff;overflow:hidden;align-items:flex-end}
+.premium-doctors-grid .doctor-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.premium-doctors-grid .doctor-info{padding:22px 19px 26px}
+.premium-doctors-grid .doctor-info h3{color:#10366e;font-size:25px;letter-spacing:-.05em}
+.premium-doctors-grid .doctor-title{font-size:13px;color:#2a5daf;font-weight:700}
+.premium-doctors-grid .doctor-bio{font-size:12px;line-height:1.9}
+@media(max-width:850px){.premium-doctors-grid .doctor-photo{height:290px}}
+@media(max-width:580px){.premium-doctors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.premium-doctors-grid .doctor-photo{height:205px}.premium-doctors-grid .doctor-info{padding:15px 12px}.premium-doctors-grid .doctor-info h3{font-size:21px}.premium-doctors-grid .doctor-bio{font-size:11px}}
+@media(max-width:380px){.premium-doctors-grid .doctor-photo{height:170px}}
