@@ -16,3 +16,26 @@
 .care-body h3{min-height:2.5em;overflow-wrap:anywhere;word-break:keep-all}
 @media(max-width:850px){.quick-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.quick-links{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-text strong{font-size:14px;line-height:1.4}.care-body h3{min-height:0}}
+
+/* v14 — unified medical program cards */
+.hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:22px}
+.hero-team{align-self:end;min-width:0;padding:22px 10px 0;background:linear-gradient(145deg,#f5f9ff,#e2efff);border:1px solid #e1eafb;border-radius:28px;overflow:hidden}
+.hero-team-label{font-size:12px;font-weight:800;letter-spacing:.12em;color:#2d5aa4;margin:0 0 14px 18px}
+.hero-team-portraits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;align-items:end}
+.hero-team-portraits img{display:block;width:100%;height:205px;object-fit:contain;object-position:bottom;min-width:0}
+.diag-section,.program-section{padding-top:84px;padding-bottom:84px}
+.modern-grid{display:grid;gap:18px}
+.diagnostics-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.programs-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.modern-card{background:linear-gradient(160deg,#fff 45%,#f3f8ff);border:1px solid #dce7f8;border-radius:22px;padding:28px;display:flex;flex-direction:column;min-width:0;box-shadow:0 12px 32px rgba(28,74,142,.035)}
+.modern-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:20px;color:#2b61b0}
+.modern-card-top span{font-size:12px;font-weight:800;letter-spacing:.03em}
+.modern-card-top svg{width:64px;height:64px;flex:none;background:#eaf3ff;border-radius:17px;padding:13px;color:#2b61b0}
+.modern-card h3{font-size:clamp(20px,2vw,26px);line-height:1.35;letter-spacing:-.045em;color:#143d80;margin:0 0 12px;word-break:keep-all}
+.modern-card p{font-size:15px;line-height:1.85;color:#53647e;margin:0;word-break:keep-all}
+.modern-card a{font-size:14px;font-weight:800;color:#2058ae;margin-top:auto;padding-top:23px;text-decoration:none}
+.modern-card a span{padding-left:7px}
+.program-section{background:#f5f9ff}
+@media(max-width:1050px){.hero-inner{grid-template-columns:1fr}.hero-team{max-width:720px;width:100%;margin:auto}.hero-team-portraits img{height:190px}.programs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.hero-inner{gap:25px}.hero-team{border-radius:20px;padding:15px 5px 0}.hero-team-label{font-size:11px;margin-left:12px}.hero-team-portraits img{height:120px}.diag-section,.program-section{padding-top:58px;padding-bottom:58px}.diagnostics-grid,.programs-grid{grid-template-columns:1fr}.modern-card{padding:23px}.modern-card h3{font-size:23px}.modern-card p{font-size:16px}.modern-card-top svg{width:62px;height:62px}}
+@media(max-width:380px){.hero-team-portraits img{height:100px}.modern-card{padding:20px}}
