@@ -58,3 +58,38 @@
 @media(max-width:850px){.premium-doctors-grid .doctor-photo{height:290px}}
 @media(max-width:580px){.premium-doctors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.premium-doctors-grid .doctor-photo{height:205px}.premium-doctors-grid .doctor-info{padding:15px 12px}.premium-doctors-grid .doctor-info h3{font-size:21px}.premium-doctors-grid .doctor-bio{font-size:11px}}
 @media(max-width:380px){.premium-doctors-grid .doctor-photo{height:170px}}
+
+/* v17 — repair the broken approach and visit sections */
+.statement{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(125deg,#123b80 0%,#2458a8 100%);color:#fff;text-align:center;padding:88px 24px 80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:400px}
+.statement::before{content:"";position:absolute;inset:auto -8% -250px auto;width:520px;height:520px;border:1px solid #ffffff2e;border-radius:50%;z-index:-1}
+.statement-mark{position:absolute;top:0;left:50%;transform:translateX(-50%);font-size:145px;line-height:1;color:#ffffff12;font-family:Georgia,serif;pointer-events:none}
+.statement .section-kicker{margin:0;color:#d9e9ff;font-size:12px;letter-spacing:.16em}
+.statement h2{margin:0;font-size:clamp(28px,3.4vw,46px);font-weight:900;line-height:1.42;letter-spacing:-.045em;word-break:keep-all}
+.statement h2 em{font-style:normal;color:#bcd7ff}
+.statement-desc{margin:0;max-width:640px;font-size:15px;line-height:1.85;color:#e1ebfc}
+.statement-logo{width:min(300px,68vw);margin-top:8px}
+.statement-logo img{display:block;width:100%;filter:brightness(0) invert(1)}
+.visit{width:100%;max-width:1180px;margin:0 auto;padding:95px 24px 110px}
+.visit-head{display:flex;align-items:end;justify-content:space-between;gap:32px}
+.visit-head h2{font-size:clamp(32px,3.5vw,46px)}
+.visit-head p{max-width:410px}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.visit-details,.hours-card{background:#f8fbff;border:1px solid #dbe7f8;border-radius:20px;padding:24px 27px;min-width:0;box-shadow:0 8px 25px #2457aa08}
+.visit-item{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:start;justify-content:start;gap:14px;padding:17px 0;border-bottom:1px solid #dfe9f7}
+.visit-item:last-child{border-bottom:0}
+.visit-icon{display:grid;place-items:center;width:40px;height:40px;background:#e8f1ff;color:#2457aa;font-weight:900;border-radius:12px;font-size:20px}
+.visit-label{display:block;color:#557bb8;font-size:11px;font-weight:800;letter-spacing:.1em;margin-bottom:8px}
+.visit-item h3{font-size:19px;color:#153e80;margin:0 0 6px;line-height:1.45;word-break:keep-all}
+.visit-item p{font-size:13px;color:#65738a;line-height:1.65;margin:0 0 8px}
+.visit-item a{font-size:13px;color:#2457aa;font-weight:800}
+.hours-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:19px;border-bottom:1px solid #dfe9f7}
+.hours-header .visit-label{margin:0}
+.hours-status{font-size:12px;color:#557bb8}
+.hours-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 16px;padding:19px 0;border-bottom:1px solid #dfe9f7}
+.hours-row>span{font-size:15px;color:#243e67;font-weight:700}
+.hours-row strong{font-size:17px;color:#153e80;white-space:nowrap}
+.hours-row small{grid-column:1/-1;font-size:12px;color:#71809b}
+.hours-note{font-size:12px;color:#667995;line-height:1.85;margin:20px 0}
+.full-btn{display:flex;width:100%;text-align:center}
+@media(max-width:760px){.statement{padding:70px 20px;min-height:340px}.statement h2{font-size:clamp(27px,6vw,37px)}.statement-desc{font-size:14px}.visit{padding:70px 20px}.visit-head{display:block}.visit-grid{grid-template-columns:1fr;gap:14px}.visit-details,.hours-card{padding:18px 20px}}
+@media(max-width:420px){.statement{padding:58px 18px}.statement h2{font-size:27px}.visit{padding:58px 16px}.visit-item h3{font-size:17px}.hours-row strong{font-size:16px}}
