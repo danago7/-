@@ -148,3 +148,15 @@
 /* v9: consistent solid pastel blue background for original doctor portraits */
 .doctor-photo{background:#d2dff4!important}
 .doctor-photo img{background:#d2dff4;object-fit:cover}
+
+/* v10: original, unretouched portrait pixels; no artificial background removal */
+.doctor-photo{background:#f5f8fc!important;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.doctor-photo img{display:block;width:100%;height:100%;object-fit:contain!important;object-position:center bottom!important;background:transparent!important}
+.doctor-card{border:1px solid #e3eaf4;box-shadow:0 8px 28px rgba(24,73,140,.045)}
+/* Elegant and restrained premium hero treatment */
+.hero{position:relative;overflow:hidden;background:linear-gradient(112deg,#f9fcff 0%,#edf5ff 58%,#e1ecfc 100%)}
+.hero:before{content:'';position:absolute;width:540px;height:540px;right:-160px;top:-240px;border-radius:50%;border:1px solid rgba(43,106,191,.12);box-shadow:0 0 0 65px rgba(255,255,255,.13),0 0 0 140px rgba(92,151,220,.045);pointer-events:none}
+.hero:after{content:'';position:absolute;right:7%;bottom:8%;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,rgba(73,134,212,.10),transparent 68%);pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+.hero h1{max-width:1050px;text-shadow:0 2px 20px rgba(255,255,255,.55)}
+@media(max-width:640px){.hero:before{width:320px;height:320px;right:-185px;top:-130px}.doctor-photo{height:330px!important}}
