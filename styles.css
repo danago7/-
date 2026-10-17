@@ -122,3 +122,7 @@
 .doctor-bio li{font-size:12px;letter-spacing:0}
 .hero h1{font-size:22px}
 }
+
+/* v32: requested section spacing only; keep all other v31 styles */
+.about .section-head{margin-bottom:46px}
+@media(max-width:650px){.about .section-head{margin-bottom:30px}}
