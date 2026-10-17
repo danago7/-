@@ -38,3 +38,87 @@
 .schedule-table small{font-size:8px}
 }
 @media(max-width:380px){.doctor-photo{height:160px}.doctor-info h3{font-size:17px}.doctor-bio li{font-size:10px}}
+
+/* v30 — layout stabilization */
+*,*::before,*::after{box-sizing:border-box}
+.hero-inner{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.hero-copy{position:relative;z-index:2;min-width:0;flex:1}
+.hero-watermark{width:min(31%,320px);height:auto;max-height:270px;object-fit:contain;opacity:.105;filter:saturate(.7);flex-shrink:0;pointer-events:none}
+.hero-buttons{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+.hero-buttons .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:172px;min-height:46px;text-align:center}
+.about .section-head{margin-bottom:0}
+.diag-card{justify-content:flex-start}
+.diag-card .modern-card-top{flex-shrink:0;min-height:56px;align-items:center}
+.diag-card h3{margin-top:24px!important;min-height:28px;display:flex;align-items:center}
+.diag-card p{margin-top:0}
+.program-card .modern-card-top{font-weight:800;letter-spacing:.08em}
+.parking-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:18px;align-items:stretch;margin-top:25px}
+.parking-intro{background:#07396e;color:#fff;padding:32px;border-radius:16px;display:flex;flex-direction:column;min-width:0}
+.parking-sign{font-size:32px;font-weight:900;line-height:1}
+.parking-sign span{font-size:12px;margin-left:8px;vertical-align:middle}
+.parking-intro h3{font-size:23px;line-height:1.5;margin:24px 0 12px;word-break:keep-all}
+.parking-intro p{font-size:13px;line-height:1.8;color:#dbeaff;margin:0 0 16px;word-break:keep-all}
+.parking-highlight{background:#fff;color:#063a76;border-radius:9px;padding:14px 16px;font-size:13px;margin-top:auto}
+.parking-note{margin-top:14px!important;font-size:11px!important}
+.parking-options{display:grid;grid-template-rows:repeat(3,1fr) auto;gap:10px;min-width:0}
+.parking-options article{background:#fff;border:1px solid #d7e5f7;border-radius:11px;padding:16px 20px;display:grid;grid-template-columns:35px 1fr;column-gap:10px;align-content:center}
+.parking-number{color:#1257ae;font-size:12px;font-weight:800;grid-row:span 2}
+.parking-options h4{font-size:16px;margin:0 0 4px;letter-spacing:-.04em}
+.parking-options p{font-size:12px;color:#667c96;margin:0}
+.parking-call{background:#e0efff;border-radius:8px;padding:12px 18px;font-size:12px;font-weight:800;color:#0754a8;text-align:center}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.visit-details{display:grid;gap:10px;min-width:0}
+.visit-item,.hours-card{border:1px solid #d8e6f6;background:#f7faff;border-radius:12px;padding:20px;min-width:0}
+.visit-item{display:flex;align-items:flex-start;gap:15px}
+.visit-icon{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border-radius:9px;background:#e3efff;color:#0754a8;font-weight:900}
+.visit-label{display:block;font-size:10px;letter-spacing:.07em;font-weight:800;color:#3970b7;margin-bottom:8px}
+.visit-item h3{font-size:16px;line-height:1.5;margin:0 0 5px;word-break:keep-all}
+.visit-item p{font-size:13px;color:#657b96;margin:0 0 8px}
+.visit-item a{color:#0754a8;font-size:12px;font-weight:800}
+.hours-card{padding:25px;display:flex;flex-direction:column;justify-content:flex-start}
+.hours-header{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #d8e6f6;padding-bottom:14px}
+.hours-status{font-size:11px;color:#6481a5}
+.hours-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:20px 0;border-bottom:1px solid #d8e6f6;align-items:center}
+.hours-row span{font-size:14px;font-weight:800}.hours-row strong{font-size:16px;white-space:nowrap}
+.hours-row small{grid-column:1/-1;color:#6881a0;font-size:12px}
+.hours-note{color:#637e9b;font-size:12px;line-height:1.7;margin-top:20px}
+.contact-band{max-width:1180px;margin:35px auto 70px;background:#07396e;color:#fff;border-radius:18px;padding:38px 45px;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden}
+.contact-copy,.contact-actions{position:relative;z-index:1}
+.contact-copy h2{font-size:29px;line-height:1.35;margin:0 0 10px}
+.contact-copy p{font-size:13px;color:#d8eaff;line-height:1.7;margin:0}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+.contact-actions .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 16px;text-align:center}
+.contact-actions .btn-white{background:#fff;color:#074583}
+.contact-actions .btn-glass{background:#ffffff18;border:1px solid #ffffff55;color:#fff}
+.contact-decoration{position:absolute;right:-80px;bottom:-160px;width:340px;height:340px;border:1px solid #ffffff1c;border-radius:50%;pointer-events:none}
+.doctor-bio li{overflow-wrap:normal;word-break:keep-all}
+@media(max-width:900px){.parking-layout{grid-template-columns:1fr 1fr}.contact-band{margin:30px 4% 60px}}
+@media(max-width:650px){
+.hero-inner{gap:0;padding:46px 18px;min-height:300px}
+.hero-watermark{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:40%;opacity:.085}
+.hero-copy{width:100%}
+.hero h1{font-size:clamp(22px,5.5vw,29px);white-space:normal;word-break:keep-all;letter-spacing:-.075em;line-height:1.5}
+.hero-buttons{flex-wrap:nowrap;gap:8px}
+.hero-buttons .btn{min-width:0;flex:1;font-size:11px;padding:11px 5px;white-space:nowrap}
+.diag-card .modern-card-top{min-height:42px}
+.diag-card h3{margin-top:14px!important;min-height:40px;font-size:15px}
+.parking-layout,.visit-grid{grid-template-columns:1fr;gap:12px}
+.parking-intro{padding:24px 20px}.parking-intro h3{font-size:19px}
+.parking-options article{padding:15px}.parking-options h4{font-size:14px}
+.visit-item,.hours-card{padding:17px}.visit-item h3{font-size:15px}
+.hours-row strong{font-size:14px}
+.contact-band{margin:15px 18px 50px;padding:27px 20px;display:block}
+.contact-copy h2{font-size:24px}
+.contact-actions{margin-top:20px;display:grid;grid-template-columns:1fr 1fr}
+.contact-actions .btn{padding:10px 6px;font-size:11px;min-width:0}
+.contact-actions .btn span{display:none}
+.doctor-bio{list-style:none;padding-left:0}
+.doctor-bio li{font-size:10px;line-height:1.65;letter-spacing:-.045em;white-space:nowrap;overflow:visible;word-break:keep-all}
+.doctor-bio li::before{content:"· ";color:#8db8ed}
+}
+@media(max-width:390px){
+.doctors-grid{grid-template-columns:1fr}
+.doctor-photo{height:270px}
+.doctor-bio li{font-size:12px;letter-spacing:0}
+.hero h1{font-size:22px}
+}
