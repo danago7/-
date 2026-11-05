@@ -126,3 +126,87 @@
 /* v32: requested section spacing only; keep all other v31 styles */
 .about .section-head{margin-bottom:46px}
 @media(max-width:650px){.about .section-head{margin-bottom:30px}}
+
+
+/* V41: Skin-care detail. All existing V40 sections and visual tokens are preserved. */
+.skin-care-section {
+  scroll-margin-top: 84px;
+  background: linear-gradient(180deg, #f5faff 0%, #fff 100%);
+  border-top: 1px solid #e2ecf8;
+}
+.skin-care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.skin-care-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 190px;
+  padding: 25px 24px;
+  background: #fff;
+  border: 1px solid #d8e6f6;
+  border-radius: 14px;
+  min-width: 0;
+}
+.skin-care-card-no {
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: .12em;
+  color: #1456a5;
+  font-weight: 800;
+}
+.skin-care-card h3 {
+  font-size: 20px;
+  margin: 23px 0 10px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  color: #0a315c;
+}
+.skin-care-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #5d7392;
+  word-break: keep-all;
+}
+.skin-care-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 22px;
+}
+.skin-care-bottom p {
+  color: #617994;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+.skin-care-bottom a {
+  color: #0755a8;
+  border: 1px solid #c7dbf4;
+  background: #fff;
+  border-radius: 9px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.skin-care-bottom a:hover, .skin-care-bottom a:focus-visible {
+  background: #edf5ff;
+}
+@media (max-width: 900px) {
+  .skin-care-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .skin-care-section { scroll-margin-top: 70px; }
+  .skin-care-grid { grid-template-columns: 1fr; gap: 10px; }
+  .skin-care-card { min-height: auto; padding: 19px 18px; }
+  .skin-care-card h3 { margin: 13px 0 8px; font-size: 18px; }
+  .skin-care-card p { font-size: 13px; }
+  .skin-care-bottom { flex-direction: column; align-items: stretch; gap: 12px; }
+  .skin-care-bottom a { text-align: center; }
+}
